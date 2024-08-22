@@ -11,6 +11,6 @@ public class KafkaConsumer {
     private static final Logger LOGGER = LoggerFactory.getLogger(KafkaConsumer.class);
     @KafkaListener(topics = "dawns", groupId = "myGroup")
     public void consume(String message){
-        LOGGER.info(String.format("Message received",message));
+        LOGGER.info(String.format("Message received -> %s",message));
     }
 }
